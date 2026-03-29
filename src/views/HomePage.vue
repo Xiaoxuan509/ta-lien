@@ -4,7 +4,7 @@
       <div class="hero-overlay">
         <div class="hero-text">
           <h2 class="subtitle">PREMIUM WOOD SUPPLIER</h2>
-          <h1 class="title">大璉木業：您的優質原木夥伴</h1>
+          <h1 class="title">大璉木業</h1>
           <p class="description">
             深耕木業數十年，專精於世界各國優質原木、板材進口與批發。
             我們堅持嚴格的品質篩選，為建築與裝潢產業提供最穩定的材料後盾。
