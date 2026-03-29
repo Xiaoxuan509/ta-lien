@@ -43,6 +43,40 @@
       </div>
     </section>
   </div>
+
+  <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="footer-logo">大璉木業 TA-LIEN</h3>
+            <p>專業原木進口與批發供應商，提供最穩定的材料品質與專業服務。</p>
+          </div>
+          
+          <div class="contact-details">
+            <h4>聯繫我們</h4>
+            <ul>
+              <li><span>📍</span> 新北市五股區凌雲路三段2號A A-3</li>
+              <li><span>📞</span> 02-2904-8855</li>
+              <!-- <li><span>📧</span> service@ta-lien.com</li>
+              <li><span>⏰</span> 週一至週五 08:30 - 17:30</li> -->
+            </ul>
+          </div>
+
+          <div class="contact-links">
+            <h4>快速連結</h4>
+            <ul>
+              <li><router-link to="/">首頁</router-link></li>
+              <li><router-link to="/products">材料庫</router-link></li>
+              <li><router-link to="/about">材料來源</router-link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="copyright">
+          <p>&copy; 2026 大璉木業 TA-LIEN 版權所有</p>
+        </div>
+      </div>
+    </section>
 </template>
 
 <style scoped>
@@ -173,13 +207,85 @@
   line-height: 1.7;
 }
 
+/* 聯絡資訊區樣式 */
+.contact-section {
+  background: #2d2421; /* 極深木棕色 */
+  color: #d7ccc8;
+  padding: 60px 20px 20px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.contact-details h4, .contact-links h4 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.contact-details ul, .contact-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-details li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  display: flex;
+  gap: 10px;
+}
+
+.contact-links li {
+  margin-bottom: 10px;
+}
+
+.contact-links a {
+  color: #d7ccc8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* 手機版適應 */
 @media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
   .title {
     font-size: 2.5rem;
   }
 
   .btn {
-    width: 100%;
+    width: 50%;
     margin: 10px 0;
     text-align: center;
   }

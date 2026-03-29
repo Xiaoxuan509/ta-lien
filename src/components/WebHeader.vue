@@ -47,6 +47,7 @@ watch(() => route.path, () => {
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </button>
+            <div v-if="isMenuOpen" class="menu-overlay" @click="isMenuOpen = false"></div>
         </div>
     </header>
 </template>
@@ -159,6 +160,35 @@ nav ul {
     height: 2px;
     background-color: #4e342e;
     transition: all 0.3s ease;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* 暗化 60% */
+  backdrop-filter: blur(3px);     /* 增加一點模糊感會更有質感 */
+  z-index: 998;                   /* 低於 nav (999) 但高於 homepage (0) */
+  animation: fadeIn 0.3s ease;    /* 讓暗化效果淡入 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  nav {
+    /* 確保手機版選單的 z-index 最高 */
+    z-index: 999;
+    /* ... 你原本的 nav 樣式 ... */
+  }
+  
+  .menu-btn {
+    z-index: 1000; /* 按鈕要能被點到 */
+  }
 }
 
 /* 手機版 RWD 優化 */
